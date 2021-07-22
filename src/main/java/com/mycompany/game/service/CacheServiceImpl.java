@@ -20,7 +20,14 @@ public class CacheServiceImpl implements CacheService{
     public void updateCache(Score score) {
         cache.add(score);
         if(cache.size()> GameConstants.ResultLimit){
-            cache.remove();
+            while (cache.size()>GameConstants.ResultLimit) {
+                cache.remove();
+            }
         }
+    }
+
+    @Override
+    public void clearCache() {
+        cache.clear();
     }
 }

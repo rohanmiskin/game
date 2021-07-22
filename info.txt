@@ -8,3 +8,16 @@ You can manually execute the service instead with:
 Warning: kafka provides a launchd plist which can only be used on macOS!
 You can manually execute the service instead with:
   zookeeper-server-start -daemon /home/linuxbrew/.linuxbrew/etc/kafka/zookeeper.properties & kafka-server-start /home/linuxbrew/.linuxbrew/etc/kafka/server.properties
+
+
+
+zookeeper-server-start zookeeper.properties
+
+kafka-server-start server.properties
+
+kafka-console-producer --broker-list localhost:9092 --topic scoreTopic
+{"gameId": 1,"playerId": 3,"scoreValue": 12}
+12 > highest in the current top
+
+
+kafka-console-consumer --bootstrap-server localhost:9092 --topic scoreTopic

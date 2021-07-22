@@ -64,7 +64,7 @@ public class BeanConfig {
     }
 
     @Bean
-    @Transactional(isolation = Isolation.READ_COMMITTED)
+    @Transactional(isolation = Isolation.SERIALIZABLE)
     public void insertSampleData() throws FileNotFoundException {
         /*Game game = new Game();
         game.setGameId(2);

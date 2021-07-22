@@ -51,7 +51,7 @@ public class FileListener {
     CacheService cacheService;
 
     @EventListener(classes = ApplicationStartedEvent.class)
-    @Transactional(isolation = Isolation.READ_COMMITTED)
+    @Transactional(isolation = Isolation.SERIALIZABLE)
     public void readScoreData() throws IOException {
         String filePath = "src/main/resources/json/score-data.json";
 
@@ -60,6 +60,8 @@ public class FileListener {
         List<ScoreFileDTO> scoreDTOs = gson.fromJson(jsonReader,SCORE_TYPE);
 
         Score score;
+
+        cacheService.clearCache();
 
         for (ScoreFileDTO scoreDTO : scoreDTOs){
             score = new Score();
@@ -71,7 +73,7 @@ public class FileListener {
             scoreDao.save(score);
         }
 
-        System.out.println("dfdfd");
+//        System.out.println("dfdfd");
 
 
 
