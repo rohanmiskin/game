@@ -17,7 +17,7 @@ public class GameServiceImpl implements GameService{
 
     @Autowired
     @Qualifier("scoreQueueBean")
-    PriorityQueue<Score> cache;
+    private PriorityQueue<Score> cache;
 
     public ScoreResponseDTO getTopScores() {
         List<Score> scores = new ArrayList<>(cache);

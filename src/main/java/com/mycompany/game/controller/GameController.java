@@ -14,11 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class GameController {
 
     @Autowired
-    private
-    GameService gameService;
+    private GameService gameService;
 
     @GetMapping("/top")
     public ResponseEntity<ScoreResponseDTO> getTopScores(){
-        return new ResponseEntity<ScoreResponseDTO>(gameService.getTopScores(),HttpStatus.OK);
+
+        ScoreResponseDTO scoreResponseDTO = gameService.getTopScores();
+        if(scoreResponseDTO.getScores().isEmpty()){
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<ScoreResponseDTO>(scoreResponseDTO,HttpStatus.OK);
     }
 }

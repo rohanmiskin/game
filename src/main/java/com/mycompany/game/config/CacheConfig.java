@@ -14,10 +14,8 @@ import java.util.concurrent.PriorityBlockingQueue;
 
 @Component
 public class CacheConfig {
-
-
-    @Autowired
-    StaticContextInitialization staticContextInitialization;
+    /*@Autowired
+    StaticContextInitialization staticContextInitialization;*/
 
     @Autowired
     ScoreDao scoreDao;
