@@ -1,0 +1,12 @@
+insert into PLAYER values(1,'player1');
+insert into PLAYER values(2,'player2');
+insert into PLAYER values(3,'player3');
+insert into PLAYER values(4,'player4');
+insert into PLAYER values(5,'player5');
+insert into PLAYER values(6,'player6');
+insert into PLAYER values(7,'player7');
+insert into PLAYER values(8,'player8');
+insert into PLAYER values(9,'player9');
+insert into PLAYER values(10,'player10');
+
+insert into GAME values(1,'Tennis');

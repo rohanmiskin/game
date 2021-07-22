@@ -1,0 +1,10 @@
+Warning: kafka provides a launchd plist which can only be used on macOS!
+You can manually execute the service instead with:
+  zookeeper-server-start -daemon /home/linuxbrew/.linuxbrew/etc/kafka/zookeeper.properties & kafka-server-start /home/linuxbrew/.linuxbrew/etc/kafka/server.properties
+==> Summary
+🍺  /home/linuxbrew/.linuxbrew/Cellar/kafka/2.8.0: 200 files, 68.2MB
+==> Caveats
+==> kafka
+Warning: kafka provides a launchd plist which can only be used on macOS!
+You can manually execute the service instead with:
+  zookeeper-server-start -daemon /home/linuxbrew/.linuxbrew/etc/kafka/zookeeper.properties & kafka-server-start /home/linuxbrew/.linuxbrew/etc/kafka/server.properties

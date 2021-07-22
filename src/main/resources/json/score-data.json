@@ -1,0 +1,47 @@
+[
+  {
+    "gameId": 1,
+    "playerId": 1,
+    "scoreValue": 5
+  },
+  {
+    "gameId": 1,
+    "playerId": 2,
+    "scoreValue": 6
+  },
+  {
+    "gameId": 1,
+    "playerId": 3,
+    "scoreValue": 8
+  },
+  {
+    "gameId": 1,
+    "playerId": 4,
+    "scoreValue": 9
+  },
+  {
+    "gameId": 1,
+    "playerId": 5,
+    "scoreValue": 10
+  },
+  {
+    "gameId": 1,
+    "playerId": 6,
+    "scoreValue": 1
+  },
+  {
+    "gameId": 1,
+    "playerId": 7,
+    "scoreValue": 2
+  },
+  {
+    "gameId": 1,
+    "playerId": 8,
+    "scoreValue": 7
+  },
+  {
+    "gameId": 1,
+    "playerId": 9,
+    "scoreValue": 3
+  }
+]
