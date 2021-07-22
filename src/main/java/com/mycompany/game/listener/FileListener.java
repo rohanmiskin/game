@@ -51,7 +51,7 @@ public class FileListener {
     CacheService cacheService;
 
     @EventListener(classes = ApplicationStartedEvent.class)
-    @Transactional(isolation = Isolation.SERIALIZABLE)
+    @Transactional(isolation = Isolation.READ_COMMITTED)
     public void readScoreData() throws IOException {
         String filePath = "src/main/resources/json/score-data.json";
 

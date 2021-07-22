@@ -11,19 +11,22 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "SCORE")
-public class Score {
+public class Score implements Comparable<Score>{
 
     @EmbeddedId
     ScoreKey scoreKey;
 
     @ManyToOne(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "GAME_ID",referencedColumnName = "GAME_ID",insertable = false,updatable = false)
     Game game;
 
     @ManyToOne(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "PLAYER_ID",referencedColumnName = "PLAYER_ID",insertable = false,updatable = false)
     Player player;
 
     @Column(name = "SCORE_VALUE")
     Integer scoreValue;
+
+    @Override
+    public int compareTo(Score o) {
+        return o.getScoreValue().compareTo(this.getScoreValue());
+    }
 }
