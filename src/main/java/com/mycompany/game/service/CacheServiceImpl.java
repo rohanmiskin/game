@@ -2,7 +2,6 @@ package com.mycompany.game.service;
 
 import com.mycompany.game.constants.GameConstants;
 import com.mycompany.game.model.entity.Score;
-import org.apache.catalina.Store;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
